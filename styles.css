@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 5px;
+}
+/* header style */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* nav bar style */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #e33;
+}
+
+.navbar ul li a:active {
+  color: #e33;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  border: none;
+  background-color: #fff;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 23px;
+  height: 3px;
+  background-color: #000;
+}
+/* close button hide */
+.close-button{
+  display: none;
+}
+
+/* Adjust Main Content to Prevent Overlap */
+main {
+  padding: 5rem 0;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+  
+.hero-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+  
+.hero-text {
+  flex: 1;
+  text-align: left;
+  order: 1;
+}
+  
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+  
+.hero .hero-btn {
+  padding: 0.7em;
+  background-color: #e33;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .hero-btn:hover {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Container for the recent posts section */
+.recent-posts-container {
+  max-width: 100%; 
+  margin: 0 auto;
+  background-color: #f2f2ff;
+  padding: 0 1rem;
+}
+
+/* Styling for View All link */
+.view-all {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.view-all a{
+  color: #007BFF;
+  text-decoration: none;
+ 
+}
+
+.view-all a:hover {
+  text-decoration: underline;
+}
+
+/* Grid for Recent Posts (homepage) */
+.recent-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Post Styling */
+.post {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*blog post*/
+/* Main Content */
+.blog-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.blog-post {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.blog-post h2 {
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.date span {
+  color: #0073e6;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* Blog Section */
+.blog {
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+}
+
+.blog h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog .blog-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog .blog-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog .blog-item h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.blog .blog-item p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.blog .blog-item .read-more {
+  color: #1e90ff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.blog .blog-item .read-more:hover {
+  color: #555;
+}
+
+/* Work Section */
+.work-section {
+  padding: 20px;
+}
+
+.work-card {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.work-card .text {
+  margin-left: 20px;
+}
+
+.work-card h2 {
+  margin: 10px 0;
+}
+
+.wdate {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.wt{
+  color: #333;
+}
+
+.work-card p {
+  color: #666;
+}
+
+/* Footer style */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  background: #fff;
+  border-top: 2px solid #ddd;
+  z-index: 1000;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+  .navbar ul {
+    display: none;
+  }
+  /* Mobile Navigation */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Hidden initially */
+    width: 50%; 
+    height: 100%;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+    
+  .nav-links.active {
+    right: 0; /* Slide-in when active */
+  }
+    
+  /* Close Button on mobile view */
+  .close-button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #000;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }  
+      
+  .menu-toggle {
+    display: flex;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+    
+  .hero-text {
+    order: 2;
+    text-align: center;
+  }
+    
+  .hero-image {
+    order: 1;
+  }
+    
+
+  .blog .blog-items {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .recent-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .view-all {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+  .work-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .work-card img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .work-card .text {
+    margin-left: 0;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
